@@ -18,16 +18,31 @@ import {
   debug,
   JS,
   React,
+  gyaanseek,
+  customnep,
+  hangman,
+  typescript,
+  nodejs,
+  mongodb,
+  mysql,
+  postgresql,
+  docker,
+  vscode,
+  postman,
 } from "../assets";
 
 export const navLinks = [
   {
-    id: "about",
-    title: "About",
+    id: "",
+    title: "Home",
   },
   {
     id: "work",
-    title: "Work",
+    title: "Projects",
+  },
+  {
+    id: "experience",
+    title: "Experience",
   },
   {
     id: "certification",
@@ -91,6 +106,38 @@ const technologies = [
     name: "git",
     icon: git,
   },
+  {
+    name: "TypeScript",
+    icon: typescript,
+  },
+  {
+    name: "Node JS",
+    icon: nodejs,
+  },
+  {
+    name: "MongoDB",
+    icon: mongodb,
+  },
+  {
+    name: "MySQL",
+    icon: mysql,
+  },
+  {
+    name: "PostgreSQL",
+    icon: postgresql,
+  },
+  {
+    name: "Docker",
+    icon: docker,
+  },
+  {
+    name: "VS Code",
+    icon: vscode,
+  },
+  {
+    name: "Postman",
+    icon: postman,
+  },
 ];
 
 const certification = [
@@ -99,23 +146,39 @@ const certification = [
     image: JS,
   },
   {
-    title: 'React.js',
+    title: 'ReactJS',
     image: React,
   }
 ];
 
 const experiences = [
   {
-    title: "React.js Developer Intern",
-    company_name: "Debugsoft Pvt. Ltd.",
+    title: "Junior Frontend Developer",
+    company_name: "DEBUGSOFT Pvt. Ltd.",
     icon: debug,
-    iconBg: "#383E56",
-    date: "May 2025 - Present",
+    iconBg: "#ffffff",
+    date: "September 2025 - Present",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Developed and deployed a public-facing Autism awareness website from concept to production using ReactJS, ensuring accessibility and responsive design.",
+      "Engineered core frontend features for the NCRA cooperative platform, supporting a system used by 15,000+ users.",
+      "Built and maintained the RHVAP job portal website from scratch using ReactJS, delivering a complete and scalable frontend solution.",
+      "Designed and implemented admin dashboard components, integrating RESTful APIs for efficient data management and operations.",
+      "Developed reusable UI components to improve code consistency, scalability, and reduce overall development time.",
+      "Utilized Git for version control, enabling smooth collaboration and maintaining a clean and organized codebase.",
+    ],
+  },
+  {
+    title: "Frontend Developer Intern",
+    company_name: "DEBUGSOFT Pvt. Ltd.",
+    icon: debug,
+    iconBg: "#ffffff",
+    date: "May 2025 - August 2025",
+    points: [
+      "Contributed to the development and design of HEMIS analytics dashboard using ReactJS and Material-UI.",
+      "Assisted in building and designing the campus website with responsive UI components.",
+      "Integrated RESTful APIs for dynamic data retrieval and real-time updates across applications.",
+      "Utilized Git version control in collaborative development environment, following Agile methodologies.",
+      "Collaborated with senior developers to implement user interface features and improve application functionality.",
     ],
   },
 ];
@@ -140,69 +203,69 @@ const socials = [
 ];
 
 const projects = [
-  // {
-  //   name: "Weather app",
-  //   description:
-  //     "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
-  //   tags: [
-  //     {
-  //       name: "react",
-  //       color: "blue-text-gradient",
-  //     },
-  //     {
-  //       name: "mongodb",
-  //       color: "green-text-gradient",
-  //     },
-  //     {
-  //       name: "tailwind",
-  //       color: "pink-text-gradient",
-  //     },
-  //   ],
-  //   image: carrent,
-  //   source_code_link: "https://weather-seven-fawn-26.vercel.app/",
-  // },
-  // {
-  //   name: "Job IT",
-  //   description:
-  //     "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
-  //   tags: [
-  //     {
-  //       name: "react",
-  //       color: "blue-text-gradient",
-  //     },
-  //     {
-  //       name: "restapi",
-  //       color: "green-text-gradient",
-  //     },
-  //     {
-  //       name: "scss",
-  //       color: "pink-text-gradient",
-  //     },
-  //   ],
-  //   image: jobit,
-  //   source_code_link: "https://github.com/",
-  // },
-  // {
-  //   name: "Trip Guide",
-  //   description:
-  //     "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-  //   tags: [
-  //     {
-  //       name: "nextjs",
-  //       color: "blue-text-gradient",
-  //     },
-  //     {
-  //       name: "supabase",
-  //       color: "green-text-gradient",
-  //     },
-  //     {
-  //       name: "css",
-  //       color: "pink-text-gradient",
-  //     },
-  //   ],
-  //   image: tripguide,
-  //   source_code_link: "https://github.com/",
-  // },
+  {
+    name: "GyaanSeek",
+    description:
+      "A modern educational platform designed for seamless knowledge sharing. It features a responsive dashboard, organized study materials, and an intuitive search system for students and learners.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "framer-motion",
+        color: "green-text-gradient",
+      },
+    ],
+    image: gyaanseek,
+    source_code_link: "https://gyaanseek.vercel.app/",
+  },
+  {
+    name: "CustomNep",
+    description:
+      "A premium e-commerce solution focused on product customization. Users can personalize items like water bottles with a sleek 3D-inspired preview and a smooth checkout experience.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "green-text-gradient",
+      },
+      {
+        name: "css",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: customnep,
+    source_code_link: "https://ecom-custom-nep.vercel.app/",
+  },
+  {
+    name: "Hangman Game",
+    description:
+      "A stylish, neon-themed Hangman game that combines classic wordplay with a modern cyberpunk aesthetic. Features interactive animations and a high-tech user interface.",
+    tags: [
+      {
+        name: "javascript",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "react",
+        color: "green-text-gradient",
+      },
+      {
+        name: "framer-motion",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: hangman,
+    source_code_link: "https://do-not-let-me-be-a-hangman.vercel.app/",
+  },
 ];
 
 export { services, technologies, certification, socials, experiences, projects };

@@ -45,20 +45,17 @@ const About = () => {
 
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
-        className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
+        className="mt-4 text-secondary text-[20px] max-w-3xl leading-[30px]"
       >
-        I'm a skilled software developer with experience in JavaScript, and
-        expertise in framework like React.js. I build scalable web apps that
-        deliver exceptional user experiences. I prioritize clean coding and stay
-        up-to-date with trends to exceed expectations. Let's work together to
-        bring your ideas to life!
+        I am a skilled software developer with strong experience in JavaScript
+        and TypeScript, specializing in modern frameworks like React.js, and
+        possessing full-stack expertise in the MERN stack (MongoDB, Express.js,
+        React.js, Node.js) to build scalable, high-performance web applications
+        from concept to deployment.  I
+        continuously stay updated with the latest technologies and best
+        practices to deliver solutions that exceed expectations—let’s work
+        together to bring your ideas to life!
       </motion.p>
-
-      <div className="mt-20 flex flex-wrap gap-10">
-        {services.map((service, index) => (
-          <ServiceCard key={service.title} index={index} {...service} />
-        ))}
-      </div>
     </>
   );
 };

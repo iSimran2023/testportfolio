@@ -22,8 +22,21 @@ import instagram from './tech/instagram.png';
 
 import debug from './company/debug.png';
 
+import typescript from "./tech/typescript.svg";
+import nodejs from "./tech/nodejs.svg";
+import mongodb from "./tech/mongodb.svg";
+import mysql from "./tech/mysql.svg";
+import postgresql from "./tech/postgresql.svg";
+import docker from "./tech/docker.svg";
+import vscode from "./tech/vscode.svg";
+import postman from "./tech/postman.svg";
+
 import JS from './certification/JS.png';
 import React from './certification/React.png';
+
+import gyaanseek from './gyaanseek.png';
+import customnep from './customnep.png';
+import hangman from './hangman.png';
 
 export {
   logo,
@@ -49,4 +62,15 @@ export {
   debug,
   JS,
   React,
+  gyaanseek,
+  customnep,
+  hangman,
+  typescript,
+  nodejs,
+  mongodb,
+  mysql,
+  postgresql,
+  docker,
+  vscode,
+  postman,
 };
