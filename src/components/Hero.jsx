@@ -1,7 +1,9 @@
 import { motion } from "framer-motion";
-import Lottie from "lottie-react";
+import LottieModule from "lottie-react";
 import codingCoffee from "../assets/coding-coffee.json";
 import { styles } from "../styles";
+
+const Lottie = LottieModule.default || LottieModule;
 
 const Hero = () => {
 	return (
