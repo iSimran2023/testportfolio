@@ -47,14 +47,14 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[20px] max-w-3xl leading-[30px]"
       >
-        I am a skilled software developer with strong experience in JavaScript
-        and TypeScript, specializing in modern frameworks like React.js, and
-        possessing full-stack expertise in the MERN stack (MongoDB, Express.js,
-        React.js, Node.js) to build scalable, high-performance web applications
-        from concept to deployment.  I
-        continuously stay updated with the latest technologies and best
-        practices to deliver solutions that exceed expectations—let’s work
-        together to bring your ideas to life!
+        I'm a Frontend Developer at DEBUGSOFT with over a year of building
+        production web applications for government cooperative offices and
+        institutions in Nepal. I build frontends in React.js, TypeScript and
+        Angular, and I go full-stack when needed: I built the
+        Node.js, Express and PostgreSQL backends behind LCMS, FMIS, the Claim
+        Registration Portal and the Cooperative Complaint Management System,
+        including NCHL bank payment integration. I care about systems that
+        handle real money and real people correctly, securely and reliably.
       </motion.p>
     </>
   );

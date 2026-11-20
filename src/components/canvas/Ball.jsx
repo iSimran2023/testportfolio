@@ -1,23 +1,20 @@
-import React, { Suspense } from "react";
-import { Canvas } from "@react-three/fiber";
-import {
-	Decal,
-	Float,
-	OrbitControls,
-	Preload,
-	useTexture,
-} from "@react-three/drei";
+import React, { Suspense, useRef } from "react";
+import { useFrame } from "@react-three/fiber";
+import { Decal, Float, View, useTexture } from "@react-three/drei";
 
-import CanvasLoader from "../Loader";
+const Ball = ({ imgUrl }) => {
+	const mesh = useRef();
+	const [decal] = useTexture([imgUrl]);
 
-const Ball = (props) => {
-	const [decal] = useTexture([props.imgUrl]);
+	useFrame((_, delta) => {
+		mesh.current.rotation.y += delta * 0.8;
+	});
 
 	return (
 		<Float speed={2} rotationIntensity={1} floatIntensity={2}>
 			<ambientLight intensity={0.25} />
 			<directionalLight position={[0, 0, 0.05]} />
-			<mesh castShadow receiveShadow scale={2.75}>
+			<mesh ref={mesh} castShadow receiveShadow scale={2.75}>
 				<icosahedronGeometry args={[1, 1]} />
 				<meshStandardMaterial
 					color='#fff8eb'
@@ -44,21 +41,15 @@ const Ball = (props) => {
 	);
 };
 
-const BallCanvas = ({ icon }) => {
-	return (
-		<Canvas
-			frameloop='demand'
-			dpr={[1, 2]}
-			gl={{ preserveDrawingBuffer: true }}
-		>
-			<Suspense fallback={<CanvasLoader />}>
-				<OrbitControls autoRotate autoRotateSpeed={8} enableZoom={false} />
-				<Ball imgUrl={icon} />
-			</Suspense>
+// One ball drawn into the shared canvas, positioned over the `track` element.
+// Each ball used to have its own <Canvas>, but browsers only keep ~16 WebGL
+// contexts alive, so balls past that limit went blank.
+const BallView = ({ track, icon }) => (
+	<View track={track}>
+		<Suspense fallback={null}>
+			<Ball imgUrl={icon} />
+		</Suspense>
+	</View>
+);
 
-			<Preload all />
-		</Canvas>
-	);
-};
-
-export default BallCanvas;
+export default BallView;

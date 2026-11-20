@@ -16,22 +16,43 @@ const Social = () => {
 					<h2 className={styles.sectionHeadText}>Socials</h2>
 				</motion.div>
 				<div className='flex gap-7 flex-wrap justify-center mt-8'>
-					{socials.map((social, index) => {
-						return (
-							<a
-								className='black-gradient h-20 w-20 rounded-full group flex justify-center items-center cursor-pointer'
-								href={social.link}
-								target='_blank'
-								key={index}
+					{socials.map((social, index) => (
+						<a
+							className='black-gradient h-20 w-20 rounded-full flex justify-center items-center'
+							href={social.link}
+							target='_blank'
+							rel='noopener noreferrer'
+							aria-label={social.name}
+							key={social.name}
+						>
+							<svg
+								viewBox='0 0 24 24'
+								className='h-9 w-9'
+								fill='none'
+								stroke='#fcd394'
+								strokeWidth='1.8'
+								strokeLinecap='round'
+								strokeLinejoin='round'
 							>
-								<img
-									src={social.image}
-									className='h-1/2 w-1/2 object-contain group-hover:scale-[1.1] transition-all'
-									alt=''
-								/>
-							</a>
-						);
-					})}
+								{social.paths.map((d, i) => (
+									<motion.path
+										key={i}
+										d={d}
+										initial={{ pathLength: 0 }}
+										animate={{ pathLength: 1 }}
+										transition={{
+											duration: 2.5,
+											ease: "easeInOut",
+											repeat: Infinity,
+											repeatType: "reverse",
+											repeatDelay: 0.6,
+											delay: index * 0.3 + i * 0.2,
+										}}
+									/>
+								))}
+							</svg>
+						</a>
+					))}
 				</div>
 			</motion.div>
 		</>

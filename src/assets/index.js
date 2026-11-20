@@ -30,6 +30,14 @@ import postgresql from "./tech/postgresql.svg";
 import docker from "./tech/docker.svg";
 import vscode from "./tech/vscode.svg";
 import postman from "./tech/postman.svg";
+import angular from "./tech/angular.svg";
+import redux from "./tech/redux.svg";
+import express from "./tech/express.svg";
+import prisma from "./tech/prisma.svg";
+import swagger from "./tech/swagger.svg";
+import linux from "./tech/linux.svg";
+import nginx from "./tech/nginx.svg";
+import githubdev from "./tech/githubdev.svg";
 
 import JS from './certification/JS.png';
 import React from './certification/React.png';
@@ -37,6 +45,7 @@ import React from './certification/React.png';
 import gyaanseek from './gyaanseek.png';
 import customnep from './customnep.png';
 import hangman from './hangman.png';
+
 
 export {
   logo,
@@ -73,4 +82,12 @@ export {
   docker,
   vscode,
   postman,
+  angular,
+  redux,
+  express,
+  prisma,
+  swagger,
+  linux,
+  nginx,
+  githubdev,
 };
